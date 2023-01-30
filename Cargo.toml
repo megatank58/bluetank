@@ -1,0 +1,15 @@
+[package]
+name = "bluetank"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+strip = true
+lto = true
+opt-level = "z"
+
+[dependencies]
+tui = { version = "0.19", features = ["crossterm"], default-features = false }
+crossterm = "0.19"
+btleplug = "0.10.4"
+tokio = { version = "1.25.0", features = ["full"] }
